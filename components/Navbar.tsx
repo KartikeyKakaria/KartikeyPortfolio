@@ -20,7 +20,7 @@ const Navbar = () => {
         className="links flex flex-row gap-5 font-open_sans sm:text-xl text-md"
       >
         {links.map((link) => (
-          <p className="font-semibold text-md hover:brightness-90 hover:scale-105 duration-500">
+          <p key={link.link} className="font-semibold text-md hover:brightness-90 hover:scale-105 duration-500">
             <a href={link.link}>{link.title}</a>
           </p>
         ))}

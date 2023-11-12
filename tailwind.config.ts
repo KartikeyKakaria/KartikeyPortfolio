@@ -8,7 +8,8 @@ const config: Config = {
   ],
   theme: {
     fontFamily:{
-      'open_sans':['Open sans', 'sans-serif']
+      'open_sans':['Open sans', 'sans-serif'],
+      'TNR':['Times New Roman', 'serif']
     },
     extend: {
       backgroundImage: {
