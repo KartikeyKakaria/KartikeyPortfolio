@@ -7,8 +7,10 @@ const About = () => {
       <div className="flex flex-row gap-2">
         <div className="line sm:w-32 w-20 h-[1px] bg-[#FFDE68]" />
         <p className='sm:text-lg lg:text-xl'>
-            I'm a young software/web developer from India. I have a sufficient amount of knowledge about <span className='text-yellow-300'>Problem solving, Web Frontend & Backend</span>. I Still hope to learn a lot more and a gain a bunch of experience in the coming years. In short I'm a <span className="text-yellow-300">trustworthy, reliable and creative person </span>
+            I'm a young software/web developer from India. I have a sufficient amount of knowledge about <span className='text-yellow-300'>Problem solving, Web Frontend & Backend</span>. I Still hope to learn a lot more and a gain a bunch of experience in the coming years. <span className='sm:block hidden'>
+            In short I'm a <span className="text-yellow-300">trustworthy, reliable and creative person </span>
             on whom you can rely for your work :).
+            </span>
         </p>
       </div>
     </div>
