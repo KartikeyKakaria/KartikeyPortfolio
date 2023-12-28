@@ -11,7 +11,7 @@ const Skills = () => {
         <div className="line w-auto h-[1px] bg-gradient-to-r from-green-400 to-blue-500 " />
       </h2>
 
-      <div className="skills flex flex-row p-8 w-full justify-around">
+      <div className="skills flex flex-row p-8 w-full justify-around flex-wrap">
         {skills.map(({ name, image, experience }) => (
           <Card>
             <img src={`./skills/${image}`} alt="" height={100} width={100} />

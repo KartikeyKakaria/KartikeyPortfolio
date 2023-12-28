@@ -15,24 +15,41 @@ export const links = [
 
 export const technologies = [
   {
-    name: "JavaScript",
+    name:"JavaScript",
+    img:"js"
   },
   {
-    name: "Typescript",
-  },
-  {
-    name: "HTML & CSS",
-  },
-  {
-    name: "React",
-  },
-  {
-    name: "Tailwind",
-  },
-  {
-    name: "Next",
-  },
-];
+    name:"TypeScript",
+    img:"ts"
+  },{
+    name:"HTML",
+    img:"html"
+  },{
+    name:"CSS",
+    img:"css"
+  },{
+    name:"Mongo",
+    img:"mongo"
+  },{
+    name:"Next",
+    img:"next"
+  },{
+    name:"Node",
+    img:"node"
+  },{
+    name:"React",
+    img:"react"
+  },{
+    name:"Redux",
+    img:"redux"
+  },{
+    name:"Svelte",
+    img:"Svelte"
+  },{
+    name:"Tailwind",
+    img:"tailwind"
+  }
+]
 
 export const skills = [
   {

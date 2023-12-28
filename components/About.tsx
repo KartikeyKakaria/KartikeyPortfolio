@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='bg-[#27292a] w-screen p-16 flex flex-col gap-7'>
+    <div id='about' className='bg-[#27292a] w-screen p-16 flex flex-col gap-7'>
       <h2 className='font-TNR sm:text-5xl text-4xl font-bold'>About</h2>
       <div className="flex flex-row gap-2">
         <div className="line sm:w-32 w-20 h-[1px] bg-[#FFDE68]" />
