@@ -16,38 +16,49 @@ export const links = [
 export const technologies = [
   {
     name:"JavaScript",
-    img:"js"
+    img:"js",
+    color:"yellow-400"
   },
   {
     name:"TypeScript",
-    img:"ts"
+    img:"ts",
+    color:"blue-500"
   },{
     name:"HTML",
-    img:"html"
+    img:"html",
+    color:"orange-600"
   },{
     name:"CSS",
-    img:"css"
+    img:"css",
+    color:"blue-400"
   },{
     name:"Mongo",
-    img:"mongo"
+    img:"mongo",
+    color:"green-300"
   },{
     name:"Next",
-    img:"next"
+    img:"next",
+    color:"black"
   },{
     name:"Node",
-    img:"node"
+    img:"node",
+    color:"green-600"
   },{
     name:"React",
-    img:"react"
+    img:"react",
+    color:"blue-300"
   },{
     name:"Redux",
-    img:"redux"
+    img:"redux",
+    color:"purple-300"
   },{
     name:"Svelte",
-    img:"Svelte"
+    img:"Svelte",
+    color:"orange-600"
   },{
     name:"Tailwind",
-    img:"tailwind"
+    img:"tailwind",
+    color:"blue-300"
   }
 ]
 
