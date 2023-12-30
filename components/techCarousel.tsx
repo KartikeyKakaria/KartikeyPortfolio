@@ -15,7 +15,7 @@ const Test = () => {
       opts={{
         align: "start",
       }}
-      className="w-[20vh] sm:max-w-xl sm:w-full"
+      className="w-[20vh] sm:w-[40vh] lg:max-w-xl lg:w-full"
     >
       <CarouselContent>
         {technologies.map(({ name, img, color }, index) => (
