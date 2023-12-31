@@ -24,7 +24,12 @@ const Test = () => {
             className="md:basis-1/2 lg:basis-1/3 cursor-pointer"
           >
             <div className="p-1">
-              <Card className="rounded-full bg-gradient-to-br from-gray-700 to-gray-800 border-black duration-300 hover:scale-105 hover:brightness-95">
+              <Card
+                style={{
+                  boxShadow: "3px 3px 10px black",
+                }}
+                className="rounded-full bg-gradient-to-br from-gray-700 to-gray-800 border-black duration-300 hover:scale-105 hover:brightness-95"
+              >
                 <CardContent className="flex flex-col aspect-square items-center justify-center gap-3 p-6">
                   <img
                     src={`./technologies/${img}.svg`}
@@ -32,7 +37,7 @@ const Test = () => {
                     height={name == "Mongo" ? 30 : name == "Tailwind" ? 60 : 50}
                     width={name == "Mongo" ? 30 : name == "Tailwind" ? 60 : 50}
                   />
-                  <h3 className={`text-sm text-${color}`}>{name}</h3>
+                  <h3 className={`text-sm text-white`}>{name}</h3>
                 </CardContent>
               </Card>
             </div>

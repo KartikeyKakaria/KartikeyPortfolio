@@ -6,14 +6,14 @@ const Skills = () => {
     <div className="flex flex-col p-10 justify-center items-center gap-4">
       <h3 className="text-[#ccad3b] text-lg">Services</h3>
 
-      <h2 className="font-bold text-4xl flex flex-col gap-5">
+      <h2 className="font-bold text-4xl flex flex-col gap-5 text-center">
         WHAT I AM GREAT AT{" "}
         <div className="line w-auto h-[1px] bg-gradient-to-r from-green-400 to-blue-500 " />
       </h2>
 
       <div className="skills flex flex-row p-8 gap-10 w-full justify-around flex-wrap">
         {skills.map(({ name, image, experience }) => (
-          <Card>
+          <Card >
             <img src={`./skills/${image}`} alt="" height={100} width={100} />
             <h2 className="text-2xl max-w-[150px] text-center">{name}</h2>
             <span className="text-gray-400 text-sm mt-auto">{experience}+ years</span>

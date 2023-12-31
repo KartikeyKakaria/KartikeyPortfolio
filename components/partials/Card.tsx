@@ -16,7 +16,9 @@ const Card = ({children}:{
       scale={1.2}
       gyroscope={true}
     >
-        <div className="p-10 border-stone-900 border-2 rounded-lg bg-gradient-to-br from-blue-400 to-blue-900 flex flex-col justify-center items-center">
+        <div style={{
+            boxShadow: "3px 3px 10px black",
+          }} className="p-10 border-stone-900 border-2 rounded-lg bg-gradient-to-br from-blue-400 to-blue-900 flex flex-col justify-center items-center">
             {children}
         </div>
     </Tilt>

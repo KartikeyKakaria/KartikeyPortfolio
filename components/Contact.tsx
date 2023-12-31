@@ -65,7 +65,7 @@ const Contact = () => {
           className="h-auto w-auto form flex flex-col bg-gradient-to-tl p-8 from-blue-600/70 to-blue-400/70 gap-5"
         >
           <input
-            className="bg-[#050512] p-4 outline-none border-gray-400 border-[0.5px]"
+            className="bg-[#050512] duration-300 focus:text-white focus:bg-slate-900 p-4 outline-none border-gray-400 border-[0.5px]"
             style={{
               borderRadius: "5px",
             }}
@@ -73,7 +73,7 @@ const Contact = () => {
             placeholder="Name"
           />
           <input
-            className="bg-[#050512] p-4 outline-none border-gray-400 border-[0.5px]"
+            className="bg-[#050512] duration-300 focus:text-white focus:bg-slate-900 p-4 outline-none border-gray-400 border-[0.5px]"
             style={{
               borderRadius: "5px",
             }}
@@ -81,7 +81,7 @@ const Contact = () => {
             placeholder="Email"
           />
           <textarea
-            className="bg-[#050512] p-4 outline-none border-gray-400 border-[0.5px]"
+            className="bg-[#050512] duration-300 focus:text-white focus:bg-slate-900 p-4 outline-none border-gray-400 border-[0.5px]"
             placeholder="Drop your Message!"
             name="message"
             id="message"
@@ -91,14 +91,14 @@ const Contact = () => {
             style={{
               borderRadius: "12px",
             }}
-            className="bg-[#050512] p-4 w-[40%]"
+            className="bg-[#050512] cursor-pointer duration-300 hover:brightness-75 p-4 w-[40%]"
           >
             Send
           </button>
         </div>
       </div>
       <div className="bg-white w-full h-[0.5px]"></div>
-      <div className="footer flex sm:flex-row flex-col justify-around items-center">
+      <div className="footer flex sm:flex-row flex-col justify-around items-center gap-4">
         <div className="logo sm:flex hidden">
           <img
             style={{
@@ -117,15 +117,15 @@ const Contact = () => {
             style={{
               borderRadius: "12px",
             }}
-            className="bg-gradient-to-tl p-3 from-blue-800/70 to-blue-400/70"
+            className="cursor-pointer hover:brightness-75 duration-300 bg-gradient-to-tl p-3 from-black/70 to-gray-800/70"
           >
-            <img src="./icons/github.png" height={20} width={20} alt="" />
+            <img src="./icons/githubD.png" height={20} width={20} alt="" />
           </div>
           <div
             style={{
               borderRadius: "12px",
             }}
-            className="bg-gradient-to-tl p-3 from-blue-800/70 to-blue-400/70"
+            className="cursor-pointer hover:brightness-75 duration-300 bg-gradient-to-tl p-3 from-blue-800/70 to-blue-400/70"
           >
             <img src="./icons/email.png" height={20} width={20} alt="" />
           </div>
@@ -133,7 +133,7 @@ const Contact = () => {
             style={{
               borderRadius: "12px",
             }}
-            className="bg-gradient-to-tl p-3 from-blue-800/70 to-blue-400/70"
+            className="cursor-pointer hover:brightness-75 duration-300 bg-gradient-to-tl p-3 from-pink-800/70 to-pink-400/70"
           >
             <img src="./icons/instagram.png" height={20} width={20} alt="" />
           </div>
@@ -141,7 +141,7 @@ const Contact = () => {
             style={{
               borderRadius: "12px",
             }}
-            className="bg-gradient-to-tl p-3 from-purple-300 to-purple-400"
+            className="cursor-pointer hover:brightness-75 duration-300 bg-gradient-to-tl p-3 from-violet-600 to-violet-500"
           >
             <img src="./icons/discord.png" height={20} width={20} alt="" />
           </div>
