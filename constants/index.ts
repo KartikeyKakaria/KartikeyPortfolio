@@ -100,3 +100,25 @@ export const qualities = [
     number:15
   }
 ]
+
+export const projects =[
+  {
+    name:"Car Racing Game",
+    img:"Cars",
+    description:"A Car Racing game made purely in vanilla JS, HTML and CSS. The game is made with an intrinsic understanding of the DOM model ",
+    github:"https://github.com/KartikeyKakaria/Car-Racing",
+    link:"https://KartikeyKakaria.github.io/Car-Racing",
+  },{
+    name:"Snappy Chat App",
+    img:"Chat",
+    description:"A Chat App Made using the MERN stacks along with usage of technologies like socket.io and redux_toolkit",
+    github:"https://github.com/KartikeyKakaria/mern-chat-app",
+    link:"https://github.com/KartikeyKakaria/mern-chat-app"
+  },{
+    name:"Three.js Portfolio",
+    img:"3d_portfolio",
+    description:"A demo 3d portfolio website made using React, three.js, tailwindcss and react-motion animations, a demonstration of understanding of working of structures and models on the frontend",
+    github:"https://github.com/KartikeyKakaria/KartikeyKakaria.github.io",
+    link:"https://kartikeykakaria.github.io"
+  }
+]
