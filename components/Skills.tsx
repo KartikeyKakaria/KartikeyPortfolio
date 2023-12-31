@@ -11,7 +11,7 @@ const Skills = () => {
         <div className="line w-auto h-[1px] bg-gradient-to-r from-green-400 to-blue-500 " />
       </h2>
 
-      <div className="skills flex flex-row p-8 w-full justify-around flex-wrap">
+      <div className="skills flex flex-row p-8 gap-10 w-full justify-around flex-wrap">
         {skills.map(({ name, image, experience }) => (
           <Card>
             <img src={`./skills/${image}`} alt="" height={100} width={100} />
@@ -20,10 +20,10 @@ const Skills = () => {
           </Card>
         ))}
       </div>
-      <div className="qualities flex flex-row p-10 justify-around w-full">
+      <div className="qualities flex flex-row p-10 justify-around w-full flex-wrap gap-5">
           {
             qualities.map(({name, number})=>(
-              <div className="flex flex-col justify-center gap-3 items-center">
+              <div className="flex max-w-[100px] flex-col justify-center gap-3 items-center">
                 <h3 className="text-orange-500 text-5xl">{number}+</h3>
                 <p className="text-white text-sm">{name}</p>
               </div>

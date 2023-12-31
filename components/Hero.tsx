@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import ReactTyped from "react-typed";
 const Hero = () => {
   return (
     <main className="flex shadow-lg min-h-[82vh] flex-row justify-around items-top p-10 z-0">
@@ -35,7 +36,10 @@ const Hero = () => {
               maxHeight: 150,
             }}
           >
-            Full Stack Web Developer <br />& Python Dev
+            Yeah, I'm A{" "}
+            <span className="text-blue-500 font-semibold">
+              <ReactTyped strings={["Frontend Developer", "Backend Developer", "Freelancer"]} typeSpeed={100} backSpeed={100} startDelay={1000} loop/>
+            </span>
           </p>
           <button className="border-[#FFDE68] hover:bg-[#FFDE68] hover:text-black duration-500 border-2 mt-12 py-2 px-3 text-[#FFDE68] text-md rounded-md ">
             Contact Me

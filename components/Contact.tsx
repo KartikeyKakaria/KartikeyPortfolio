@@ -41,9 +41,9 @@ const Contact = () => {
                 }}
                 className="bg-gradient-to-tl p-3 from-blue-600/70 to-blue-400/70"
               >
-                <img src="./icons/email.png" height={20} width={20} alt="" />
+                <img src="./icons/email.png" height={20} width={20} alt="email" />
               </div>
-              <p>kartikeykakaria07@gmail.com</p>
+              <p className="max-w-[180px]">kartikeykakaria07@gmail.com</p>
             </div>
             <div className="gap-2 flex flex-row adress items-center">
               <div
@@ -54,7 +54,7 @@ const Contact = () => {
               >
                 <img src="./icons/location.png" height={20} width={20} alt="" />
               </div>
-              <p>87/1 Lane no.1 SJS Avenue, Airport Rd. Amritsar, India</p>
+              <p className="max-w-[180px]">87/1 Lane no.1 SJS Avenue, Airport Rd. Amritsar, India</p>
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="bg-white w-full h-[0.5px]"></div>
-      <div className="footer flex flex-row justify-around items-center">
+      <div className="footer flex sm:flex-row flex-col justify-around items-center">
         <div className="logo sm:flex hidden">
           <img
             style={{
@@ -112,7 +112,7 @@ const Contact = () => {
           />
         </div>
         <div className="text-gray-400">Made with ❤️| KartikeyKakaria</div>
-        <div className="sm:flex hidden flex-row gap-5">
+        <div className="flex flex-row gap-5">
           <div
             style={{
               borderRadius: "12px",
@@ -141,7 +141,7 @@ const Contact = () => {
             style={{
               borderRadius: "12px",
             }}
-            className="bg-gradient-to-tl p-3 from-blue-800/70 to-blue-400/70"
+            className="bg-gradient-to-tl p-3 from-purple-300 to-purple-400"
           >
             <img src="./icons/discord.png" height={20} width={20} alt="" />
           </div>
