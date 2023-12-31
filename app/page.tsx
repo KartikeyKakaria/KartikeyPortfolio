@@ -8,6 +8,7 @@ import Skills from "@/components/Skills";
 import { signal } from "@preact/signals-react";
 import Technolgies from "@/components/Technolgies";
 import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <>
@@ -16,6 +17,7 @@ export default function Home() {
       <Skills />
       <Technolgies />
       <Projects />
+      <Contact />
     </>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { projects } from "@/constants";
 const Projects = () => {
   return (
-    <div className=" flex flex-col justify-center items-center p-10 gap-5">
+    <div className="w-full flex flex-col justify-center items-center p-10 gap-5">
       <h3 className="text-[#ccad3b] text-lg">Projects</h3>
 
       <h2 className="font-bold text-4xl flex flex-col gap-5 max-w-sm text-center">
