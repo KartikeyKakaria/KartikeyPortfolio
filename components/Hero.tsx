@@ -42,7 +42,7 @@ const Hero = () => {
             </span>
           </p>
           <button className="border-[#FFDE68] hover:bg-[#FFDE68] hover:text-black duration-500 border-2 mt-12 py-2 px-3 text-[#FFDE68] text-md rounded-md ">
-            Contact Me
+            <a href="#contact">Contact Me</a>
           </button>
         </div>
         <div className="absolute bottom-[10px] left-[10px] sm:relative  z-40 down-icon rounded-full bg-gray-600 mt-auto w-14 h-14 text-3xl flex justify-center items-center hover:brightness-90 duration-300 cursor-pointer animate-bounce">
