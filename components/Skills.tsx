@@ -68,7 +68,7 @@ const Skills = () => {
         {qualities.map(({ name, number }) => (
           <div className="flex max-w-[100px] flex-col justify-center gap-3 items-center">
             <h3 className="text-orange-500 text-5xl">
-
+              {number}+
             </h3>
             <p className="text-white text-sm">{name}</p>
           </div>

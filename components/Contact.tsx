@@ -1,8 +1,36 @@
-import React from "react";
-
+"use client";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+type status = "idle" | "success" | "loading" | "error";
 const Contact = () => {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [status, setStatus] = useState<status>("idle");
+  function submit() {
+    setStatus("loading");
+    emailjs
+      .send("service_p9rm0q7", "template_r5quesz", {
+        from_name: name,
+        to_name: "Kartikey",
+        from_email: email,
+        to_email: "kartikeykakaria5@gmail.com",
+        message: message,
+      },"z1kqv7wKa5AixuTz9")
+      .then(() => {
+        setName("");
+        setMessage("");
+        setEmail("");
+        setStatus("success");
+        setTimeout(()=>setStatus("idle"), 2000)
+      })
+      .catch(() => {
+        setStatus("error");
+      });
+  }
   return (
     <div
+      id="contact"
       style={{
         borderTopLeftRadius: "82px",
         borderTopRightRadius: "82px",
@@ -41,7 +69,12 @@ const Contact = () => {
                 }}
                 className="bg-gradient-to-tl p-3 from-blue-600/70 to-blue-400/70"
               >
-                <img src="./icons/email.png" height={20} width={20} alt="email" />
+                <img
+                  src="./icons/email.png"
+                  height={20}
+                  width={20}
+                  alt="email"
+                />
               </div>
               <p className="max-w-[180px]">kartikeykakaria07@gmail.com</p>
             </div>
@@ -54,11 +87,17 @@ const Contact = () => {
               >
                 <img src="./icons/location.png" height={20} width={20} alt="" />
               </div>
-              <p className="max-w-[180px]">87/1 Lane no.1 SJS Avenue, Airport Rd. Amritsar, India</p>
+              <p className="max-w-[180px]">
+                87/1 Lane no.1 SJS Avenue, Airport Rd. Amritsar, India
+              </p>
             </div>
           </div>
         </div>
-        <div
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            submit();
+          }}
           style={{
             borderRadius: "12px",
           }}
@@ -69,6 +108,8 @@ const Contact = () => {
             style={{
               borderRadius: "5px",
             }}
+            onChange={(e) => setName(e.target.value)}
+            value={name}
             type="text"
             placeholder="Name"
           />
@@ -77,7 +118,9 @@ const Contact = () => {
             style={{
               borderRadius: "5px",
             }}
-            type="text"
+            type="email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
             placeholder="Email"
           />
           <textarea
@@ -86,16 +129,25 @@ const Contact = () => {
             name="message"
             id="message"
             rows={3}
+            onChange={(e) => setMessage(e.target.value)}
+            value={message}
           ></textarea>
           <button
+            type="submit"
             style={{
               borderRadius: "12px",
             }}
             className="bg-[#050512] cursor-pointer duration-300 hover:brightness-75 p-4 w-[40%]"
           >
-            Send
+            {status == "idle"
+              ? "Send"
+              : status == "loading"
+              ? "Sending..."
+              : status === "success"
+              ? "Sent!"
+              : "Error :("}
           </button>
-        </div>
+        </form>
       </div>
       <div className="bg-white w-full h-[0.5px]"></div>
       <div className="footer flex sm:flex-row flex-col justify-around items-center gap-4">
@@ -119,7 +171,9 @@ const Contact = () => {
             }}
             className="cursor-pointer hover:brightness-75 duration-300 bg-gradient-to-tl p-3 from-black/70 to-gray-800/70"
           >
-            <img src="./icons/githubD.png" height={20} width={20} alt="" />
+            <img onClick={()=>{
+              window.location.href="https://github.com/KartikeyKakaria"
+            }} src="./icons/githubD.png" height={20} width={20} alt="" />
           </div>
           <div
             style={{
@@ -127,7 +181,9 @@ const Contact = () => {
             }}
             className="cursor-pointer hover:brightness-75 duration-300 bg-gradient-to-tl p-3 from-blue-800/70 to-blue-400/70"
           >
-            <img src="./icons/email.png" height={20} width={20} alt="" />
+            <img onClick={()=>{
+              window.location.href="kartikeykaria07@gmail.com"
+            }} src="./icons/email.png" height={20} width={20} alt="" />
           </div>
           <div
             style={{
@@ -135,7 +191,9 @@ const Contact = () => {
             }}
             className="cursor-pointer hover:brightness-75 duration-300 bg-gradient-to-tl p-3 from-pink-800/70 to-pink-400/70"
           >
-            <img src="./icons/instagram.png" height={20} width={20} alt="" />
+            <img onClick={()=>{
+              window.location.href="https://instagram.com/devkk.tsx"
+            }} src="./icons/instagram.png" height={20} width={20} alt="" />
           </div>
           <div
             style={{
@@ -143,7 +201,9 @@ const Contact = () => {
             }}
             className="cursor-pointer hover:brightness-75 duration-300 bg-gradient-to-tl p-3 from-violet-600 to-violet-500"
           >
-            <img src="./icons/discord.png" height={20} width={20} alt="" />
+            <img onClick={()=>{
+              window.location.href="https://discord.com/app"
+            }} src="./icons/discord.png" height={20} width={20} alt="" />
           </div>
         </div>
       </div>

@@ -39,20 +39,24 @@ const Navbar = () => {
         }}
         className="socials gap-7 hidden sm:flex flex-row"
       >
+        <a target="_blank" href="https://github.com/KartikeyKakaria"  className="hover:brightness-90 duration-300 cursor-pointer hover:scale-105">
         <Image
           src={"/github.svg"}
           alt="github"
-          height={60}
-          width={60}
+          height={40}
+          width={40}
           className="hover:brightness-90 duration-300 cursor-pointer hover:scale-105"
-        ></Image>
-        <Image
+        />
+        </a>
+       <a target="_blank" href="https://instagram.com/devkk.tsx" className="hover:brightness-90 duration-300 cursor-pointer hover:scale-105"> <Image
           src={"/instagram.svg"}
           alt="github"
-          height={60}
-          width={60}
+          height={70}
+          width={70}
           className="hover:brightness-90 duration-300 cursor-pointer hover:scale-105"
         ></Image>
+        </a>
+        <a target="_blank" href="https://discord.com/app">
         <Image
           src={"/discord.svg"}
           alt="github"
@@ -60,6 +64,7 @@ const Navbar = () => {
           width={40}
           className="hover:brightness-90 duration-300 cursor-pointer hover:scale-105"
         ></Image>
+        </a>
       </motion.div>
     </header>
   );

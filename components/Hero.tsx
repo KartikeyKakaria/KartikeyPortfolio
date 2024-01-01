@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import ReactTyped from "react-typed";
 const Hero = () => {
   return (
-    <main className="flex bg-hero shadow-lg min-h-[82vh] relative lg:flex-row flex-col justify-around items-top p-10 z-0 gap-10 ">
+    <main id="main" className="flex bg-hero shadow-lg min-h-[82vh] relative lg:flex-row flex-col justify-around items-top p-10 z-0 gap-10 ">
       <motion.div
         initial={{
           x: -300,
@@ -45,7 +45,7 @@ const Hero = () => {
             Contact Me
           </button>
         </div>
-        <div className=" absolute bottom-[10px] left-[10px] sm:flex  z-40 down-icon rounded-full bg-gray-600 mt-auto w-14 h-14 text-3xl flex justify-center items-center hover:brightness-90 duration-300 cursor-pointer animate-bounce">
+        <div className="absolute bottom-[10px] left-[10px] sm:relative  z-40 down-icon rounded-full bg-gray-600 mt-auto w-14 h-14 text-3xl flex justify-center items-center hover:brightness-90 duration-300 cursor-pointer animate-bounce">
           <a href="#about">&darr;</a>
         </div>
       </motion.div>
@@ -94,6 +94,9 @@ const Hero = () => {
             alt="github"
             src={"./github.svg"}
             className="grayscale hover:brightness-125 hover:scale-105 duration-300 cursor-pointer"
+            onClick={()=>{
+              window.location.href="https://github.com/KartikeyKakaria"
+            }}
           ></Image>
           <Image
             width={55}
@@ -101,6 +104,9 @@ const Hero = () => {
             alt="instagram"
             src={"./instagram.svg"}
             className="grayscale hover:brightness-125 hover:scale-105 duration-300 cursor-pointer"
+            onClick={()=>{
+              window.location.href="https://instagram.com/devkk.tsx"
+            }}
           ></Image>
           <Image
             width={30}
@@ -108,6 +114,9 @@ const Hero = () => {
             alt={"discord"}
             src={"./discord.svg"}
             className="grayscale hover:brightness-125 hover:scale-105 duration-300 cursor-pointer"
+            onClick={()=>{
+              window.location.href="https://discord.com/app"
+            }}
           ></Image>
         </motion.div>
       </motion.div>
