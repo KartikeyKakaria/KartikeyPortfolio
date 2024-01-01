@@ -5,7 +5,9 @@ import { links } from "@/constants";
 import { motion } from "framer-motion";
 const Navbar = () => {
   return (
-    <header className="bg-[#303335] flex z-100 gap-3 flex-row justify-around px-5 py-7 items-center">
+    <header style={{
+      boxShadow:"10px 10px 10px black"
+    }} className="bg-[#303335] flex z-50 gap-3 flex-row sticky w-full justify-around px-5 py-7 items-center">
       <div className="logo">
         <Image alt="logo" height={80} width={80} src={"/logo.jpg"} />
       </div>

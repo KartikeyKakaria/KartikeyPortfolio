@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import ReactTyped from "react-typed";
 const Hero = () => {
   return (
-    <main className="flex shadow-lg min-h-[82vh] flex-row justify-around items-top p-10 z-0">
+    <main className="flex bg-hero shadow-lg min-h-[82vh] relative lg:flex-row flex-col justify-around items-top p-10 z-0 gap-10 ">
       <motion.div
         initial={{
           x: -300,
@@ -45,7 +45,7 @@ const Hero = () => {
             Contact Me
           </button>
         </div>
-        <div className="down-icon rounded-full bg-gray-600 mt-auto w-14 h-14 text-3xl flex justify-center items-center hover:brightness-90 duration-300 cursor-pointer animate-bounce">
+        <div className=" absolute bottom-[10px] left-[10px] sm:flex  z-40 down-icon rounded-full bg-gray-600 mt-auto w-14 h-14 text-3xl flex justify-center items-center hover:brightness-90 duration-300 cursor-pointer animate-bounce">
           <a href="#about">&darr;</a>
         </div>
       </motion.div>
@@ -64,20 +64,28 @@ const Hero = () => {
           type: "spring",
           bounce: 0.3,
         }}
-        className="image flex-row justify-center items-center hidden sm:flex"
+        className="image flex-row justify-center items-center flex"
       >
+        <div style={{
+          borderRadius:"20px"
+        }} className="relative">
+          <div className="bottom-[-30px] right-[-20px] bg-yellow-400 h-[75%] w-[75%]"></div>
         <Image
+          style={{
+            borderRadius:"20px"
+          }}
           src={"/logo.jpg"}
           alt={"logo"}
           width={450}
           height={450}
-          className="z-0"
+          className="z-10"
         ></Image>
+        </div>
         <motion.div
           initial={{
             x: -20,
           }}
-          className="links flex flex-col gap-2 z-10 items-center"
+          className="links flex flex-col gap-2 z-20 items-center"
         >
           <div className="line bg-[#FFDE68] h-48 w-[1px]" />
           <Image

@@ -19,7 +19,8 @@ const config = {
     },
     extend: {
       backgroundImage:{
-        'tech':"url('/techBg.jpg')"
+        'tech':"url('/techBg.jpg')",
+        "hero":"url('/heroBg.gif')"
       },
       colors: {
         border: "hsl(var(--border))",

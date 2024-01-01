@@ -23,7 +23,7 @@ const About = () => {
       <div className="flex sm:flex-row flex-col gap-10 justify-around">
         <div className="info flex flex-wrap flex-col gap-5">
           <h2 className="text-2xl font-semibold">Personal Info</h2>
-          <div className="flex flex-row gap-5">
+          <div className="flex sm:flex-row flex-col gap-5">
             <div className="flex flex-col justify-start gap-3">
               <div>
                 <span className="text-gray-600">First Name:</span>Kartikey
