@@ -88,7 +88,7 @@ const Contact = () => {
                 <img src="./icons/location.png" height={20} width={20} alt="" />
               </div>
               <p className="max-w-[180px]">
-                87/1 Lane no.1 SJS Avenue, Airport Rd. Amritsar, India
+                Amritsar, India
               </p>
             </div>
           </div>
