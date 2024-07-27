@@ -4,7 +4,7 @@ import { projects } from "@/constants";
 import { motion } from "framer-motion";
 const Projects = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center p-10 gap-5">
+    <div className="w-full flex flex-col justify-center items-center p-10 pb-20 gap-5">
       <motion.h3
         initial={{
           scale: 0,
@@ -14,7 +14,7 @@ const Projects = () => {
         }}
         transition={{
           duration: 0.5,
-          type: "bounce",
+          type:"inertia"
         }}
         className="text-[#ccad3b] text-lg"
       >
@@ -48,12 +48,10 @@ const Projects = () => {
               initial={{
                 opacity: 0,
                 x: -300,
-                rotate: 0,
               }}
               whileInView={{
                 opacity: 1,
                 x: 0,
-                rotate: 360,
               }}
               transition={{
                 duration: 0.7,

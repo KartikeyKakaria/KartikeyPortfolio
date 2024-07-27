@@ -14,6 +14,9 @@ dependencies:
   '@radix-ui/react-slot':
     specifier: ^1.0.2
     version: 1.0.2(@types/react@18.0.0)(react@18.0.0)
+  '@sweetalert2/theme-dark':
+    specifier: ^5.0.17
+    version: 5.0.17
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -31,7 +34,7 @@ dependencies:
     version: 0.303.0(react@18.0.0)
   next:
     specifier: 14.0.1
-    version: 14.0.1(react-dom@18.0.0)(react@18.0.0)
+    version: 14.0.1(react-dom@18.0.0)(react@18.0.0)(sass@1.77.8)
   react:
     specifier: ^18
     version: 18.0.0
@@ -50,9 +53,15 @@ dependencies:
   react-typed:
     specifier: ^1.2.0
     version: 1.2.0(react-dom@18.0.0)(react@18.0.0)
+  sass:
+    specifier: ^1.77.8
+    version: 1.77.8
   swal:
     specifier: ^0.1.0
     version: 0.1.0
+  sweetalert2:
+    specifier: ^11.12.3
+    version: 11.12.3
   tailwind-merge:
     specifier: ^2.2.0
     version: 2.2.0
@@ -329,6 +338,10 @@ packages:
     resolution: {integrity: sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==}
     dependencies:
       tslib: 2.6.3
+    dev: false
+
+  /@sweetalert2/theme-dark@5.0.17:
+    resolution: {integrity: sha512-9POcnsN92rKBYtzYqwxX6Egap8JNAoCxJ2X7oUALtasHqNlRW034vvAAsaL0/F2BGqW4yPkWMKru7yj9S/jP/A==}
     dev: false
 
   /@types/node@20.0.0:
@@ -680,6 +693,10 @@ packages:
     dependencies:
       function-bind: 1.1.2
 
+  /immutable@4.3.7:
+    resolution: {integrity: sha512-1hqclzwYwjRDFLjcFxOM5AYkkG0rpFPpr1RLPMEuGczoS7YA8gLhy8SWXYRAA/XwfEHpfo3cw5JGioS32fnMRw==}
+    dev: false
+
   /is-binary-path@2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
@@ -805,7 +822,7 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  /next@14.0.1(react-dom@18.0.0)(react@18.0.0):
+  /next@14.0.1(react-dom@18.0.0)(react@18.0.0)(sass@1.77.8):
     resolution: {integrity: sha512-s4YaLpE4b0gmb3ggtmpmV+wt+lPRuGtANzojMQ2+gmBpgX9w5fTbjsy6dXByBuENsdCX5pukZH/GxdFgO62+pA==}
     engines: {node: '>=18.17.0'}
     hasBin: true
@@ -827,6 +844,7 @@ packages:
       postcss: 8.4.31
       react: 18.0.0
       react-dom: 18.0.0(react@18.0.0)
+      sass: 1.77.8
       styled-jsx: 5.1.1(react@18.0.0)
       watchpack: 2.4.0
     optionalDependencies:
@@ -1105,6 +1123,16 @@ packages:
     dependencies:
       queue-microtask: 1.2.3
 
+  /sass@1.77.8:
+    resolution: {integrity: sha512-4UHg6prsrycW20fqLGPShtEvo/WyHRVRHwOP4DzkUrObWoWI05QBSfzU71TVB7PFaL104TwNaHpjlWXAZbQiNQ==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.7
+      source-map-js: 1.2.0
+    dev: false
+
   /scheduler@0.21.0:
     resolution: {integrity: sha512-1r87x5fz9MXqswA2ERLo0EbOAU74DpIUO090gIasYTqlVoJeMcl+Z1Rg7WHz+qtPujhS/hGIt9kxZOYBV3faRQ==}
     dependencies:
@@ -1206,6 +1234,10 @@ packages:
     engines: {node: '>= 4.0.0', npm: '>= 3.0.0'}
     dependencies:
       vue: 2.7.16
+    dev: false
+
+  /sweetalert2@11.12.3:
+    resolution: {integrity: sha512-tgGJSgfSV/xK113JEvhjwqKAuBYLXsZf0z+tGlHKQNnsLMi4eSNuzn9tt5hUdvjOVTLSPDgo0Lc+tnjy9Uj7Og==}
     dev: false
 
   /tailwind-merge@2.2.0:

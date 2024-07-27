@@ -1,32 +1,57 @@
 "use client";
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import Swal from 'sweetalert2';
+import '@sweetalert2/theme-dark/dark.css';
 type status = "idle" | "success" | "loading" | "error";
 const Contact = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [status, setStatus] = useState<status>("idle");
+  const emailCheck = /[a-zA-Z0-9.*%±]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}/
   function submit() {
     setStatus("loading");
-    emailjs
-      .send("service_p9rm0q7", "template_r5quesz", {
-        from_name: name,
-        to_name: "Kartikey",
-        from_email: email,
-        to_email: "kartikeykakaria5@gmail.com",
-        message: message,
-      },"z1kqv7wKa5AixuTz9")
-      .then(() => {
-        setName("");
-        setMessage("");
-        setEmail("");
-        setStatus("success");
-        setTimeout(()=>setStatus("idle"), 2000)
-      })
-      .catch(() => {
-        setStatus("error");
+    if (!message || !name) {
+      Swal.fire({
+        title: 'Error!',
+        text: 'Please Enter a message and a name atleast',
+        icon: 'error',
+        confirmButtonText: 'Continue',
+        background:"#000000",
+        confirmButtonColor:"#3F3C3C"
       });
+    }
+    if(!email || !emailCheck.test(email)){
+      Swal.fire({
+        title: 'Error!',
+        text: 'Please Enter a valid email',
+        icon: 'error',
+        confirmButtonText: 'Continue',
+        background:"#000000",
+        confirmButtonColor:"#3F3C3C"
+      });
+    }
+    else {
+      emailjs
+        .send("service_p9rm0q7", "template_r5quesz", {
+          from_name: name,
+          to_name: "Kartikey",
+          from_email: email,
+          to_email: "kartikeykakaria5@gmail.com",
+          message: message + "/n From email: " + email,
+        }, "z1kqv7wKa5AixuTz9")
+        .then(() => {
+          setName("");
+          setMessage("");
+          setEmail("");
+          setStatus("success");
+          setTimeout(() => setStatus("idle"), 2000)
+        })
+        .catch(() => {
+          setStatus("error");
+        });
+    }
   }
   return (
     <div
@@ -142,10 +167,10 @@ const Contact = () => {
             {status == "idle"
               ? "Send"
               : status == "loading"
-              ? "Sending..."
-              : status === "success"
-              ? "Sent!"
-              : "Error :("}
+                ? "Sending..."
+                : status === "success"
+                  ? "Sent!"
+                  : "Error :("}
           </button>
         </form>
       </div>
@@ -171,8 +196,8 @@ const Contact = () => {
             }}
             className="cursor-pointer hover:brightness-75 duration-300 bg-gradient-to-tl p-3 from-black/70 to-gray-800/70"
           >
-            <img onClick={()=>{
-              window.location.href="https://github.com/KartikeyKakaria"
+            <img onClick={() => {
+              window.location.href = "https://github.com/KartikeyKakaria"
             }} src="./icons/githubD.png" height={20} width={20} alt="" />
           </div>
           <div
@@ -181,8 +206,8 @@ const Contact = () => {
             }}
             className="cursor-pointer hover:brightness-75 duration-300 bg-gradient-to-tl p-3 from-blue-800/70 to-blue-400/70"
           >
-            <img onClick={()=>{
-              window.location.href="kartikeykaria07@gmail.com"
+            <img onClick={() => {
+              window.location.href = "kartikeykaria07@gmail.com"
             }} src="./icons/email.png" height={20} width={20} alt="" />
           </div>
           <div
@@ -191,8 +216,8 @@ const Contact = () => {
             }}
             className="cursor-pointer hover:brightness-75 duration-300 bg-gradient-to-tl p-3 from-pink-800/70 to-pink-400/70"
           >
-            <img onClick={()=>{
-              window.location.href="https://instagram.com/devkk.tsx"
+            <img onClick={() => {
+              window.location.href = "https://instagram.com/devkk.tsx"
             }} src="./icons/instagram.png" height={20} width={20} alt="" />
           </div>
           <div
@@ -201,8 +226,8 @@ const Contact = () => {
             }}
             className="cursor-pointer hover:brightness-75 duration-300 bg-gradient-to-tl p-3 from-violet-600 to-violet-500"
           >
-            <img onClick={()=>{
-              window.location.href="https://discord.com/app"
+            <img onClick={() => {
+              window.location.href = "https://discord.com/app"
             }} src="./icons/discord.png" height={20} width={20} alt="" />
           </div>
         </div>
