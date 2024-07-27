@@ -7,9 +7,9 @@ const Navbar = () => {
   return (
     <header style={{
       boxShadow:"10px 10px 10px black"
-    }} className="bg-[#303335] flex z-50 gap-3 flex-row sticky w-full justify-around px-5 py-7 items-center">
+    }} className="bg-[#2d2d2d] flex z-50 gap-3 flex-row sticky w-full justify-around px-5 py-7 items-center">
       <div className="logo">
-        <Image alt="logo" height={80} width={80} src={"/logo.jpg"} />
+        <Image alt="logo" height={80} width={80} className="scale-125" src={"/logoHeader.jpg"} />
       </div>
       <motion.div
         initial={{
