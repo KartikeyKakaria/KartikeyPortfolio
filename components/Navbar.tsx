@@ -48,7 +48,7 @@ const Navbar = () => {
           className="hover:brightness-90 duration-300 cursor-pointer hover:scale-105"
         />
         </a>
-       <a target="_blank" href="https://instagram.com/devkk.tsx" className="hover:brightness-90 duration-300 cursor-pointer hover:scale-105"> <Image
+       <a target="_blank" href="https://instagram.com/kartikeykakaria" className="hover:brightness-90 duration-300 cursor-pointer hover:scale-105"> <Image
           src={"/instagram.svg"}
           alt="github"
           height={70}

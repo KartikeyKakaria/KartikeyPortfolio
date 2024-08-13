@@ -105,7 +105,7 @@ const Hero = () => {
             src={"./instagram.svg"}
             className="grayscale hover:brightness-125 hover:scale-105 duration-300 cursor-pointer"
             onClick={()=>{
-              window.location.href="https://instagram.com/devkk.tsx"
+              window.location.href="https://instagram.com/kartikeykakaria"
             }}
           ></Image>
           <Image
