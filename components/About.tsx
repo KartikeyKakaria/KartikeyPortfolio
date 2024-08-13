@@ -35,7 +35,7 @@ const About = () => {
                 <span className="text-gray-600">Discord:</span>devkk.tsx
               </div>
               <div>
-                <span className="text-gray-600">Instagram:</span>devkk.tsx
+                <span className="text-gray-600">Instagram:</span>kartikeykakaria
               </div>
             </div>
             <div className="flex flex-col justify-start gap-3">
