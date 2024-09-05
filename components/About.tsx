@@ -28,9 +28,7 @@ const About = () => {
               <div>
                 <span className="text-gray-600">First Name:</span>Kartikey
               </div>
-              <div>
-                <span className="text-gray-600">Age:</span>15
-              </div>
+             
               <div>
                 <span className="text-gray-600">Discord:</span>devkk.tsx
               </div>
